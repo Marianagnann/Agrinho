@@ -205,7 +205,6 @@ body {
 #toggle-tema:checked ~ .site {
   background-color: #f5f5f5;
   color: #121212;
-  font-family: 'Montserrat', Bold;
 }
 
 #toggle-tema:checked ~ .site nav {
@@ -239,7 +238,7 @@ body {
 }
 
 #toggle-tema:checked ~ .site .stat-label {
-  color: #444;
+  color: #181818;
 }
 
 #toggle-tema:checked ~ .site .image-suggestion {
@@ -248,9 +247,13 @@ body {
   border-left-color: #00bcd4;
 }
 
+#toggle-tema:checked ~ .site .source {
+  color: #616161;
+}
+
 #toggle-tema:checked ~ .site footer {
   background-color: #e0e0e0;
-  color: #333;
+  color: #181818;
 }
 
 html {
