@@ -9,6 +9,7 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
 }
 
 /* === BOTÃO DE TEMA === */
@@ -40,15 +41,30 @@ body {
   background-color: #0e0e0e;
   color: #f5f5f5;
   line-height: 1.6;
-  transition: background-color 0.4s ease, color 0.4s ease;
   padding-bottom: 2rem;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* === ANIMAÇÃO DE APARECIMENTO === */
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* === CABEÇALHO === */
 .site header {
   background-color: #211AEE;
-  padding: 1rem 2rem;
+  padding: 2rem 1rem;
   text-align: center;
+  animation: fadeIn 0.8s ease forwards;
 }
 
 .site header img {
@@ -59,10 +75,16 @@ body {
 
 /* === NAVEGAÇÃO === */
 .site nav {
+  position: sticky;
+  top: 0;
   background-color: #121212;
   padding: 1rem;
   text-align: center;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
 }
+
 
 .site nav ul {
   list-style: none;
@@ -93,14 +115,24 @@ body {
   margin: auto;
 }
 
-.site h2,
-.site h3 {
+.site h2 {
   color: #ffeb3b;
+  margin-top: 2rem;
   margin-bottom: 1rem;
+  transition: color 0.4s ease;
+  text-align: center;
+}
+
+.site h3 {
+  color: #c27c20;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  transition: color 0.4s ease;
 }
 
 .site p {
   margin-bottom: 1rem;
+  transition: color 0.4s ease;
 }
 
 .site .highlight-box {
@@ -108,6 +140,7 @@ body {
   padding: 1rem;
   border-left: 4px solid #64ffda;
   margin: 2rem 0;
+  transition: background-color 0.4s ease, border-left 0.4s ease, color 0.4s ease;
 }
 
 .site .stats {
@@ -123,23 +156,27 @@ body {
   padding: 1rem;
   border-radius: 8px;
   text-align: center;
+  transition: background-color 0.4s ease, border-color 0.4s ease;
 }
 
 .site .stat-number {
   font-size: 2rem;
   color: #00bcd4;
   font-weight: bold;
+  transition: color 0.4s ease;
 }
 
 .site .stat-label {
   font-size: 0.9rem;
   color: #ccc;
+  transition: color 0.4s ease;
 }
 
 .site .source {
   font-size: 0.8rem;
   color: #888;
-  margin-top: 1rem;
+  margin-top: -0.5rem;
+  transition: color 0.4s ease;
 }
 
 .site .image-suggestion {
@@ -149,6 +186,7 @@ body {
   margin-bottom: 1.5rem;
   font-size: 0.9rem;
   color: #ddd;
+  transition: background-color 0.4s ease, color 0.4s ease, border-left 0.4s ease;
 }
 
 /* === RODAPÉ === */
@@ -156,14 +194,18 @@ body {
   background-color: #121212;
   color: #888;
   text-align: center;
-  padding: 1rem;
   font-size: 0.9rem;
+  padding-top: 1rem;
+  padding-bottom: 0.3rem;
+  margin-bottom: -2rem;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 /* === TEMA CLARO ATIVADO === */
 #toggle-tema:checked ~ .site {
   background-color: #f5f5f5;
   color: #121212;
+  font-family: 'Montserrat', Bold;
 }
 
 #toggle-tema:checked ~ .site nav {
@@ -174,9 +216,12 @@ body {
   color: #00796b;
 }
 
-#toggle-tema:checked ~ .site h2,
+#toggle-tema:checked ~ .site h2{
+  color: #d80101;
+}
+
 #toggle-tema:checked ~ .site h3 {
-  color: #00796b;
+  color: #d88d01;
 }
 
 #toggle-tema:checked ~ .site .highlight-box {
@@ -206,4 +251,9 @@ body {
 #toggle-tema:checked ~ .site footer {
   background-color: #e0e0e0;
   color: #333;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem; /* altura do nav */
 }
