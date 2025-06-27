@@ -117,7 +117,7 @@ body {
 
 .site h2 {
   color: #ffeb3b;
-  margin-top: 4rem;
+  margin-top: 3.5rem;
   margin-bottom: 1rem;
   transition: color 0.4s ease;
   text-align: center;
@@ -125,8 +125,8 @@ body {
 
 .site h3 {
   color: #c27c20;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0.7rem;
   transition: color 0.4s ease;
 }
 
@@ -182,11 +182,43 @@ body {
   transition: color 0.4s ease;
 }
 
-.site .imgin{
-  max-width: 50%;
-  height: auto;
-  display: block;
+.before-after {
+  margin-left: -3rem;
   display: flex;
+  justify-content: center;
+  /* opcional: centraliza */
+  flex-wrap: wrap;
+  /* permite quebrar em telas pequenas */
+}
+
+.imgin1 {
+  margin-top: -2rem;
+  margin-right: 1.5rem;
+  width: 40%;
+  height: 35%;
+}
+
+.imgin2 {
+  margin-top: 0.27rem;
+  width: 45%;
+  height: 320px;
+  border-radius: 25px;
+}
+
+.bloco-flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem; /* espaço entre imagem e texto */
+  flex-wrap: wrap; /* permite quebrar em telas pequenas */
+}
+
+.texto-precisao{
+  flex: 1; /* ocupa o restante do espaço */
+  margin-top: 3.4rem;
+}
+
+.drone {
+  margin-top: -1.9rem;
 }
 
 /* === RODAPÉ === */
@@ -246,12 +278,6 @@ body {
 
 #toggle-tema:checked~.site .stat-label {
   color: #555;
-}
-
-#toggle-tema:checked~.site .image-suggestion {
-  background-color: #f0f0f0;
-  color: #2c2c2c;
-  border-left-color: #64b5f6;
 }
 
 #toggle-tema:checked~.site .source {
