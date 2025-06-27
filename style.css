@@ -208,17 +208,42 @@ body {
 .bloco-flex {
   display: flex;
   align-items: flex-start;
-  gap: 2rem; /* espaço entre imagem e texto */
-  flex-wrap: wrap; /* permite quebrar em telas pequenas */
+  gap: 2rem;
+  /* espaço entre imagem e texto */
+  flex-wrap: wrap;
+  /* permite quebrar em telas pequenas */
 }
 
-.texto-precisao{
-  flex: 1; /* ocupa o restante do espaço */
+.texto-precisao {
+  flex: 1;
+  /* ocupa o restante do espaço */
   margin-top: 3.4rem;
 }
 
 .drone {
   margin-top: -1.9rem;
+}
+
+.bloco-flex2 {
+  display: flex;
+  flex-direction: row-reverse; /* inverte posição: imagem à direita */
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap; /* mantém responsividade */
+}
+
+.agrovoltaico {
+  margin-top: 0.3rem;
+  display: inline-block;
+  width: 45%;
+  height: 270px;
+  border-radius: 25px;
+}
+
+.texto-energia {
+  flex: 1;
+  /* ocupa o restante do espaço */
+  margin-top: 0.3rem;
 }
 
 /* === RODAPÉ === */
