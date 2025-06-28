@@ -85,7 +85,6 @@ body {
   transition: background-color 0.4s ease, box-shadow 0.4s ease;
 }
 
-
 .site nav ul {
   list-style: none;
   display: flex;
@@ -110,7 +109,6 @@ body {
 
 /* === CONTEÚDO === */
 .site main {
-
   max-width: 1000px;
   margin: auto;
 }
@@ -124,8 +122,16 @@ body {
 }
 
 .site h3 {
-  color: #c27c20;0.5
+  color: #c27c20;
   margin-top: 2.5rem;
+  margin-bottom: 0.7rem;
+  transition: color 0.4s ease;
+}
+
+.site h4 {
+  color: #1eff83;
+  font-size: 20px;
+  padding-left: 2.3rem;
   margin-bottom: 0.7rem;
   transition: color 0.4s ease;
 }
@@ -246,7 +252,7 @@ body {
   margin-top: 0.3rem;
 }
 
-.irrigacao {
+.mapear {
   margin-top: -1rem;
   width: 23%;
   height: 35%;
@@ -291,7 +297,6 @@ body {
   /* tom mais escuro ao passar o mouse 777a7c*/
 }
 
-
 #toggle-tema:checked~.site h2 {
   color: #00838f;
 }
@@ -300,9 +305,13 @@ body {
   color: #7b1fa2;
 }
 
+#toggle-tema:checked~.site h4 {
+  color: #0b7e3d;
+}
+
 #toggle-tema:checked~.site .highlight-box {
-  background-color: #ffffff;
-  border-left-color: #4caf50;
+  background-color: #f5f5f5;
+  border-left-color: #0066ff;
 }
 
 #toggle-tema:checked~.site .stat-card {
@@ -358,7 +367,6 @@ body {
 .site #referencias a:hover {
   text-decoration: underline;
 }
-
 
 html {
   scroll-behavior: smooth;
